@@ -1,4 +1,8 @@
 # Shell scripts for Linux
+I tend to write Linux shell scripts following [Google's Shell Style Guide](https://google.github.io/styleguide/shellguide.html).  
+My scripts are intended to be used with bash > 4.0 and may not be POSIX compliant.  
+My main testing environment is the current Debian stable.  
+The shebang is `#!/usr/bin/env bash` to allow for portability across different systems.
 
 ## Security:
 1. Check for pwned passwords: `./check_pwned_password.sh <password>`   
