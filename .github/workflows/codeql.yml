@@ -36,15 +36,8 @@ jobs:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
 
-      # Run shell script checks
-      - name: Run ShellCheck
-        uses: koalaman/shellcheck-action@v2
-        with:
-          shellcheck-version: latest
-          path: . # Adjust the path to your shell scripts
-
+      # Perform CodeQL Analysis
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
-
